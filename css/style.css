@@ -189,3 +189,16 @@ section h2 {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
+
+#app > div {
+  border: solid black 1px;
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+img {
+  width: 70px;
+  margin: 10px;
+    }
