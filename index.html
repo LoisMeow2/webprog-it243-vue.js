@@ -21,6 +21,36 @@
       <p>{{ profile.about }}</p>
     </section>
 
+    <section class="about">
+  <h2>About Me</h2>
+  <p>{{ profile.about }}</p>
+  <img src="..." class="decal star" draggable="true">
+</section>
+
+<section class="education">
+  <h2>Education & Achievements</h2>
+  <p>{{ profile.education }}</p>
+  <img src="..." class="decal star" draggable="true">
+</section>
+
+<section class="experience">
+  <h2>IT Experience</h2>
+  <p>{{ profile.experience }}</p>
+  <img src="..." class="decal star" draggable="true">
+</section>
+
+<section class="hobbies">
+  <h2>Hobbies & Interests</h2>
+  <p>{{ profile.hobbies }}</p>
+  <img src="..." class="decal star" draggable="true">
+</section>
+
+<section class="goals">
+  <h2>Goals in Life</h2>
+  <p>{{ profile.goals }}</p>
+  <img src="..." class="decal taiyaki" draggable="true">
+</section>
+
     <picture-gallery :images="galleryImages"></picture-gallery>
     <guestbook :comments="comments" @add-comment="addComment"></guestbook>
 
