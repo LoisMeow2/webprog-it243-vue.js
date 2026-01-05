@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My first Vue page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal profile of Lois Vera Cruz">
   <link rel="stylesheet" href="css/style.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Lois Vera Cruz - Personal Profile</title>
 </head>
 <body>
 
-<h1>Vue Example</h1>
+  <div id="app">
+    <header class="profile-header">
+      <h1>{{ profile.name }}</h1>
+      <p>{{ profile.tagline }}</p>
+    </header>
 
-<p>The message is taken from 'data' inside the Vue instance by writing {{ message }} inside the div with id="app".</p>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>{{ profile.about }}</p>
+    </section>
 
-<div id="app">
-  {{ message }}
-</div>
+    <picture-gallery :images="galleryImages"></picture-gallery>
+    <guestbook :comments="comments" @add-comment="addComment"></guestbook>
 
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="js/vue.js"></script>
+    <footer>
+      <p>&copy; 2026 Lois Vera Cruz</p>
+    </footer>
+  </div>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/drag.js"></script>
 
 </body>
 </html>
