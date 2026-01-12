@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      message: 'the text comes out in messag'
+      message: 'havent you heard im the pisonet girl'
     };
   }
 };
