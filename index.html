@@ -55,26 +55,41 @@
     <guestbook :comments="comments" @add-comment="addComment"></guestbook>
 
 <div id="app">
-  <picture-gallery :images="galleryImages"></picture-gallery>
-  <guestbook :comments="comments" @add-comment="addComment"></guestbook>
+  <section class="food-gallery">
+    <h2>Available Snacks (Click to collect!)</h2>
+    <div class="image-container menu-list">
+      <img 
+        v-for="food in manyFoods" 
+        v-show="!food.found"
+        :src="food.src" 
+        :key="food.name" 
+        class="food-item"
+        @click="toggleFood(food)"
+      >
+    </div>
 
-<section class="food-gallery">
-  <h2>Snacks</h2>
-  <div class="image-container">
-    <img 
-      v-for="image in manyFoods" 
-      :src="image" 
-      :key="image" 
-      class="decal food-item" 
-      draggable="true"
-    >
+    <hr>
+
+    <h2>Your Plate (Draggable)</h2>
+    <div class="image-container plate-list">
+      <img 
+        v-for="food in manyFoods" 
+        v-show="food.found"
+        :src="food.src" 
+        :key="food.name + '-found'" 
+        class="decal food-item" 
+        draggable="true"
+        @click="toggleFood(food)"
+      >
+    </div>
+  </section>
+
   </div>
-</section>
 
   <footer>
     <p>&copy; 2026 Lois Vera Cruz</p>
   </footer>
-</div> <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="js/app.js"></script>
 <script src="js/drag.js"></script>
 

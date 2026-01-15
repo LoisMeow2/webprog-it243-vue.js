@@ -55,7 +55,7 @@ Vue.component('guestbook', {
 });
 
 new Vue({
-  el: '#app', // We will keep everything inside the main #app div
+  el: '#app',
   data: {
     profile: {
       name: 'Lois Vera Cruz',
@@ -66,20 +66,31 @@ new Vue({
       { id: 1, src: 'img/tropius.jpg', alt: 'Tropius' }
     ],
     comments: [],
-    // ADD THE FOOD ARRAY HERE
+    // Adapting the Shopping List style here:
     manyFoods: [
-      'img_burrito.svg',
-      'img_salad.svg',
-      'img_cake.svg',
-      'img_soup.svg',
-      'img_fish.svg',
-      'img_pizza.svg',
-      'img_rice.svg'
+      { name: 'Burrito', src: 'img_burrito.svg', found: false },
+      { name: 'Salad', src: 'img_salad.svg', found: false },
+      { name: 'Cake', src: 'img_cake.svg', found: false },
+      { name: 'Soup', src: 'img_soup.svg', found: false },
+      { name: 'Fish', src: 'img_fish.svg', found: false },
+      { name: 'Pizza', src: 'img_pizza.svg', found: false },
+      { name: 'Rice', src: 'img_rice.svg', found: false }
     ]
   },
   methods: {
     addComment(comment) {
       this.comments.push(comment);
+    },
+    // Toggle "found" status just like your shopping list example
+    toggleFood(food) {
+      food.found = !food.found;
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      if (typeof initDragLogic === 'function') {
+        initDragLogic();
+      }
+    });
   }
 });

@@ -22,8 +22,10 @@ function initDragLogic() {
     e.preventDefault();
     if (!activeDecal) return;
 
+    // Use 'fixed' so they can be dropped anywhere on the viewport
     activeDecal.style.position = 'fixed';
     activeDecal.style.left = `${e.clientX - activeDecal.offsetWidth / 2}px`;
     activeDecal.style.top = `${e.clientY - activeDecal.offsetHeight / 2}px`;
+    activeDecal.style.zIndex = "1000"; // Ensure they stay on top
   });
 }

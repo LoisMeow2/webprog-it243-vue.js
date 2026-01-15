@@ -59,7 +59,6 @@ new Vue({
       { id: 1, src: 'img/tropius.jpg', alt: 'Tropius' }
     ],
     comments: [],
-    // Add the food array here
     manyFoods: [
       'img_burrito.svg',
       'img_salad.svg',
@@ -76,7 +75,7 @@ new Vue({
     }
   },
   mounted() {
-    // This runs AFTER the page and Vue are ready
+    // Wait for the next 'tick' to ensure v-for images are in the DOM
     this.$nextTick(() => {
       if (typeof initDragLogic === 'function') {
         initDragLogic();

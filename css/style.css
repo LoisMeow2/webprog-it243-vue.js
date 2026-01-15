@@ -217,13 +217,26 @@ img {
   padding: 10px;
 }
 
-/* Specific styling for the food icons */
+.menu-list {
+  background-color: rgba(211, 254, 211, 0.5); /* Light green like shopping list */
+  border: 1px dashed #4CAF50;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+.plate-list {
+  background-color: rgba(230, 230, 230, 0.5); /* Gray like "found" list */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
 .food-item {
-  width: 70px;
-  height: auto;
+  cursor: pointer;
   transition: transform 0.2s;
 }
 
 .food-item:hover {
-  transform: scale(1.2); /* Pop out effect on hover */
+  background-color: lightgray;
+  border-radius: 5px;
 }
