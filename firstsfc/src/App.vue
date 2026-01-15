@@ -6,10 +6,11 @@
 export default {
   data() {
     return {
-      message: 'havent you heard im the pisonet girl yass'
+      message: 'havent you heard im the pisonet girl yass edittignging'
     };
   }
 };
+
 </script>
 
 <style></style>
