@@ -55,11 +55,9 @@
     <guestbook :comments="comments" @add-comment="addComment"></guestbook>
 
 <div id="app2">
-
-  <div>
-    <img v-for="x in manyFoods" v-bind:src="x">
+  <div class="image-container">
+    <img v-for="image in manyFoods" :src="image" :key="image">
   </div>
-
 </div>
 
     <footer>
@@ -71,7 +69,6 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="js/app.js"></script>
   <script src="js/drag.js"></script>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 </body>
