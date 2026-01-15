@@ -72,6 +72,28 @@
   <script src="js/app.js"></script>
   <script src="js/drag.js"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+  const app = Vue.createApp({
+   data() {
+    return {
+      manyFoods: [
+        'img_burrito.svg',
+        'img_salad.svg',
+        'img_cake.svg',
+        'img_soup.svg',
+        'img_fish.svg',
+        'img_pizza.svg',
+        'img_rice.svg'
+      ]
+    }
+   }
+  })
+  
+  app.mount('#app')
+
+</script>
 
 </body>
 </html>
