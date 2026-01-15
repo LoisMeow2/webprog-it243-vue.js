@@ -55,7 +55,7 @@ Vue.component('guestbook', {
 });
 
 new Vue({
-  el: '#app',
+  el: '#app', // We will keep everything inside the main #app div
   data: {
     profile: {
       name: 'Lois Vera Cruz',
@@ -65,7 +65,17 @@ new Vue({
     galleryImages: [
       { id: 1, src: 'img/tropius.jpg', alt: 'Tropius' }
     ],
-    comments: []
+    comments: [],
+    // ADD THE FOOD ARRAY HERE
+    manyFoods: [
+      'img_burrito.svg',
+      'img_salad.svg',
+      'img_cake.svg',
+      'img_soup.svg',
+      'img_fish.svg',
+      'img_pizza.svg',
+      'img_rice.svg'
+    ]
   },
   methods: {
     addComment(comment) {
@@ -73,21 +83,3 @@ new Vue({
     }
   }
 });
-
-  const app2 = Vue.createApp({
-   data() {
-    return {
-      manyFoods: [
-        'img_burrito.svg',
-        'img_salad.svg',
-        'img_cake.svg',
-        'img_soup.svg',
-        'img_fish.svg',
-        'img_pizza.svg',
-        'img_rice.svg'
-      ]
-    }
-   }
-  })
-  
-  app2.mount('#app2')
