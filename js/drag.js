@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initDragLogic() {
   const decals = document.querySelectorAll('.decal');
   let activeDecal = null;
 
@@ -26,4 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
     activeDecal.style.left = `${e.clientX - activeDecal.offsetWidth / 2}px`;
     activeDecal.style.top = `${e.clientY - activeDecal.offsetHeight / 2}px`;
   });
-});
+}

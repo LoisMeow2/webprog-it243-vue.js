@@ -53,26 +53,35 @@ new Vue({
     profile: {
       name: 'Lois Vera Cruz',
       tagline: 'Creative Meow | Tech Stuff | Pokemon',
-      about: 'Welcome to my personal space!',
-      education: 'BSIT at APC',
-      experience: 'Programmer (2024)',
-      hobbies: 'Drawing, Games',
-      goals: 'Bring stories to life'
+      about: 'Quite the placeholder, but something fun soon!'
     },
     galleryImages: [
-      { id: 1, src: 'https://yoyojapanstore.com/cdn/shop/files/pokemon-center-original-plush-pokemon-fit-tropius-stuffed-animals-558_grande.webp?v=1709680134', alt: 'Tropius' },
-      { id: 2, src: 'https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10000/P6975_701-08242_01.jpg', alt: 'Pinchurchin' },
-      { id: 3, src: 'https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10021/P9729_701E10606_01.jpg', alt: 'Golisopod' },
-      { id: 4, src: 'https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10000/P9440_701-98792_01.jpg', alt: 'Clawitzer' },
-      { id: 5, src: 'https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10021/P9729_701E10603_01.jpg', alt: 'Palossand' },
-      { id: 6, src: 'https://m.media-amazon.com/images/I/81qv8ouJ13L._AC_UF1000,1000_QL80_.jpg', alt: 'Arcanine' }
+      { id: 1, src: 'img/tropius.jpg', alt: 'Tropius' }
     ],
-    comments: []
+    comments: [],
+    // Add the food array here
+    manyFoods: [
+      'img_burrito.svg',
+      'img_salad.svg',
+      'img_cake.svg',
+      'img_soup.svg',
+      'img_fish.svg',
+      'img_pizza.svg',
+      'img_rice.svg'
+    ]
   },
   methods: {
     addComment(comment) {
       this.comments.push(comment);
     }
+  },
+  mounted() {
+    // This runs AFTER the page and Vue are ready
+    this.$nextTick(() => {
+      if (typeof initDragLogic === 'function') {
+        initDragLogic();
+      }
+    });
   }
 });
 
