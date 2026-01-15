@@ -17,8 +17,8 @@ export default {
 </script>
 
 <style>
-  .apple > div {
-    border: dashed black 1px;
+  .apple {
+    border: dashed black 2px;
     display: inline-block;
     margin: 10px;
     padding: 10px;
