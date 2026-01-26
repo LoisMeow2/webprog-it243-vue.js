@@ -4,8 +4,8 @@ import App from './App.vue'
 import FoodItem from './components/FoodItem.vue'
 import FoodItem2 from './components/FoodItem2.vue'
 import PersonalProfile from './components/PersonalProfile.vue'
-import CommentForm from './components/CommenForm.vue'
-import Comment from './components/Commen.vue'
+import CommentForm from './components/CommentForm.vue'
+import Comment from './components/Comment.vue'
 
 
 const app = createApp(App)
