@@ -5,6 +5,6 @@
     <comment-form/>
     <comment/>
 
-  <template.>
+  </template>
 
   <script></script>
